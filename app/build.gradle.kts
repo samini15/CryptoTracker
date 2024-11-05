@@ -5,6 +5,13 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+// For ExplicitBackingFields in K2 compiler
+/*kotlin {
+    sourceSets.all {
+        languageSettings.enableLanguageFeature("ExplicitBackingFields")
+    }
+}*/
+
 android {
     namespace = "com.example.cryptotracker"
     compileSdk = 34
@@ -36,11 +43,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         buildConfig = true
