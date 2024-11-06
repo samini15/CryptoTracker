@@ -38,9 +38,7 @@ fun CoinListScreen(
             verticalArrangement = Arrangement.spacedBy(spacing.spaceSmall)
         ) {
             items(state.coins) { coinUi ->
-                CoinListItem(modifier = Modifier.fillMaxWidth(), coinUi = coinUi) {
-
-                }
+                CoinListItem(modifier = Modifier.fillMaxWidth(), coinUi = coinUi, onClick = {})
                 HorizontalDivider()
             }
         }
